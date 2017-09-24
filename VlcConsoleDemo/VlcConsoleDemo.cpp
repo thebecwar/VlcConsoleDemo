@@ -97,7 +97,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         PostQuitMessage(0); 
         break;
     case WM_MEDIACOMPLETECALLBACK: // Media Player Completed Event
-    case WM_MBUTTONDBLCLK:
     case WM_LBUTTONDBLCLK: // Left Double Click Event
         playerInstance = (VlcPlayer*)GetWindowLongPtrW(hWnd, GWLP_USERDATA);
         SetPlayerItem(hWnd, playerInstance);
